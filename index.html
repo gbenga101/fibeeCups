@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/fibeeLogo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FibeeCups</title>
+</head>
+<body>
+    <marquee behavior="scroll" direction="left">
+        <h4>FIBEECUPS: The Cup that Cares<span><a href="https://wa.me/+2348107796118" target="_blank">Click here to Order yours Today!</a></span>
+        </h4>
+    </marquee>
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="./assets/fibeeLogo.png" alt="FibeeCups"> -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <section class="assign">
+            <div class="first">
+                <h3>FibeeCups: The Cup That Cares</h3>
+                <p>We would love to hear from you! Whether you have any questions, feedback or wants to place an order, FibeeCups is here for you</p>
+                <p>Got a craving or a special request? Drop us a message, and we'll be happy to help. Because at <strong>FibeeCups</strong>, every cup is made with care!</p>
+            </div>
+            <div class="second">
+                <form action="contact.php" method="POST">
+                    <label for="name"></label>
+                    <input type="text" name="user_name" alt="name" id="name" placeholder="Your Name" required><p></p>
+
+                    <label for="email"></label>
+                    <input type="email" name="user_email" id="email" placeholder="Your Email"><p></p>
+
+                    <label for="number"></label>
+                    <input type="number" name="user_number" id="number" placeholder="Your Phone Number" required><p></p>
+
+                    <textarea name="user_message" id="message" placeholder="How would you like us serve you better?" required></textarea><p></p>
+
+                    <input type="submit" value="Send Message">.
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

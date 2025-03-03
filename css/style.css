@@ -1,0 +1,309 @@
+:root{
+    --green: #0B6D20;
+    --white: rgb(239, 245, 235);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--white);
+}
+@media (max-width: 480px) {
+    marquee{
+        color: var(--green);
+        background-color: var(--white);
+        position: fixed;
+        z-index: 1;
+    }
+    marquee h4{
+        font-size: large;
+        letter-spacing: 0.45rem;
+    }
+    marquee span{
+        letter-spacing: normal;
+    }
+    marquee a{
+        text-decoration: none;
+        color: var(--green);
+    }
+    marquee a:hover{
+        font-variant: small-caps;
+        transition: ease-in-out, 0.3s;
+        text-decoration: underline;
+    }
+
+    header{
+        height: auto;
+        width: 100%;
+        position: relative;
+        top: 30px;
+    }
+    header > nav{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+    nav .logo{
+        height: 250px;
+        width: 200px;
+        background-image: url(../assets/fibeeLogo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        /* position: relative;
+        top: 10px; */
+    }
+    /* .logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } */
+
+    main{
+        margin: 0 15px;
+    }
+    main h1{
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    section{
+        position: relative;
+    }
+    section::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../assets/fibeeCup1.png) center/auto no-repeat;
+        filter: blur(3px);
+        z-index: -1;
+    }
+
+    /* Styling the form section */
+    form{
+        padding: 10px 0;
+        position: relative;
+    }
+
+    form *{
+        margin: 5px 0;
+    }
+    input, textarea{
+        height: 35px;
+        width: 90%;
+        padding: 10px;
+        border: 2px solid var(--green);
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.651);
+    }
+    input:hover{
+        transition: 1s ease-in-out;
+        transform-box: stroke-box;
+    }
+    textarea{
+        height: 15ch;
+    }
+    ::placeholder, :optional, option{
+        font-family: monospace;
+        font-size: 15px;
+        color: black;
+    }
+    :optional{
+        padding-right: 15px;
+    }
+
+    input[type="submit"]{
+        margin-top: 0;
+        padding: 10px;
+        width: 45%;
+        background-color: var(--green);
+        border: 2px solid var(--white);
+        border-radius: 10px;
+        color: var(--white);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    input[type="submit"]:hover{
+        transition: 0.5s ease-in-out;
+        border: 2px solid var(--green);
+        background-color: var(--white);
+        color: var(--green);
+        font-variant: small-caps;
+        letter-spacing: 0.2rem;
+        cursor: pointer;
+    }
+}
+
+/* Styling the Desktop View */
+@media (min-width: 500px) and (max-width: 1550px) {
+    body{
+        background-color: var(--white);
+    }
+    marquee{
+        background-color: var(--white);
+        color: var(--green);
+        /* background-attachment: fixed; */
+        position: fixed;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        z-index: -2;
+    }
+    marquee h4{
+        font-size: 22px;
+        letter-spacing: 0.65rem;
+    }
+    marquee span{
+        letter-spacing: normal;
+    }
+    marquee a{
+        text-decoration: none;
+        color: var(--green);
+    }
+    marquee a:hover{
+        font-variant: small-caps;
+        transition: ease-in-out, 0.3s;
+        text-decoration: underline;
+    }
+    header{
+        height: auto;
+        width: 100%;
+    }
+    header > nav{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+    nav .logo{
+        height: 255px;
+        width: 255px;
+        background-image: url(../assets/fibeeLogo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        position: relative;
+        top: 15px;
+    }
+
+    main{
+        margin: 0 25px 0 25px;
+    }
+    main h1{
+        text-align: center;
+        font-size: 35px;
+        margin-top: 0;
+    }
+
+    /* Styling the section */
+    section{
+        padding-left: 25px;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
+    
+    .first, .second{
+        width: 50%;
+    }
+    .first{
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .first::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../assets/fibeeCup1.png) center/auto no-repeat;
+        filter: blur(3px);
+        z-index: -1;
+    }
+
+    .first h3{
+        font-size: 23px;
+        text-align: center;
+    }
+    .first p{
+        font-size: 18px;
+        line-height: 2.1ch;
+    }
+    /* Styling the form section */
+    form{
+        padding: 10px 0;
+        position: relative;
+    }
+    form::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../assets/logo2.jpg) center/auto no-repeat;
+        filter: blur(5px);
+        z-index: -1;
+    }
+
+    /* form *{
+        margin: 10px 0;
+    } */
+    input, textarea{
+        height: 35px;
+        width: 90%;
+        padding: 10px;
+        border: 2px solid var(--green);
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.856);
+    }
+    input:hover{
+        transition: 1s ease-in-out;
+        transform-box: stroke-box;
+    }
+    textarea{
+        height: 20ch;
+    }
+    ::placeholder, :optional, option{
+        font-family: monospace;
+        font-size: 15px;
+        color: black;
+    }
+    :optional{
+        padding-right: 15px;
+    }
+
+    input[type="submit"]{
+        margin-top: 0;
+        padding: 10px;
+        width: 45%;
+        background-color: var(--green);
+        border: 2px solid var(--white);
+        border-radius: 10px;
+        color: var(--white);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    input[type="submit"]:hover{
+        transition: 0.5s ease-in-out;
+        border: 2px solid var(--green);
+        background-color: var(--white);
+        color: var(--green);
+        font-variant: small-caps;
+        letter-spacing: 0.2rem;
+        cursor: pointer;
+    }
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+.success {
+    color: green;
+    text-align: center;
+}
